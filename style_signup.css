@@ -152,3 +152,59 @@ header{
     background-color: var(--navbar_color);
     color: var(--navbar_text_color);
 }
+
+@media screen and (max-width: 768px) {
+
+
+    header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        background: var(--navbar_color);
+        padding: 15px 40px;
+    }
+    .navbar{
+        display: flex;
+    }
+    .navbar li{
+        position: relative;
+    }
+    .navbar a{
+        font-size: 1rem;
+        padding: 10px 10px;
+        color: var(--navbar_text_color);
+    }
+    .navbar a::after{
+        content: "";
+        width: 0;
+        height: 3px;
+        background: var(--gradient);
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        transition: 0.5s;
+    }
+    
+    .navbar a:hover::after{
+        width: 100%;
+    }
+    
+
+        
+    .signup_home{
+        margin: 70px 20px;
+    }
+
+    .signup_container{
+        background-color: var(--background-color);
+        padding: 40px 20px;
+        border-radius: 10px;
+    }
+
+
+}

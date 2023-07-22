@@ -10,6 +10,7 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
+    
 }
 
 :root{
@@ -41,15 +42,21 @@ header{
     width: 100%;
     top: 0;
     right: 0;
-    z-index: 100;
+    z-index: 9;
     display: flex;
     align-items: center;
+
     justify-content: space-between;
     background: var(--navbar_color);
     padding: 15px 100px;
     box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5);
--webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5);
--moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5);
+}
+
+.logo{
+    font-size: 20px;
+    color: #fff;
 }
 .navbar{
     display: flex;
@@ -75,6 +82,7 @@ header{
 
 .navbar a:hover::after{
     width: 100%;
+  
 }
 
 .login_btn a{
@@ -92,6 +100,7 @@ header{
 .login_btn .login:hover{
     background-color: var(--navbar_text_color);
     color: var(--first_color);
+    transition: 0.5s ease;
 }
 
 .home_container{
@@ -103,11 +112,11 @@ header{
     background-position: center;
     height: 500px;
     width: 100%;   
-    
+    height: 100vh;
 }
 
 .contenthome_container {
-    padding-top: 60px;
+    padding-top: 90px;
     text-align: center;
 }
 .contenthome_container h3{
@@ -157,6 +166,7 @@ header{
 }
 .left_moreabout p{
     font-size: 15px;
+    text-align: justify;
 }
 
 .right_moreabout img{
@@ -171,25 +181,36 @@ header{
 .services_about {
     padding: 160px 60px;
 }
+.services_about h1{
+ text-align: center;
+ font-size: 40px;
+ margin-bottom: 20px;
+ color: #CF1259;
+}
 .services_about_container {
     display: flex;
     text-align: center;
     
 }
-.services_container{
+.services_container {
     margin-left: 20px;
     margin-right: 20px;
-    background: var(--first_color) ;
+    background: var(--first_color);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     padding-bottom: 70px;
+    transition: all 1s ease; /* Adding a transition for a smooth effect */
 }
+
+.services_container:hover {
+    background: linear-gradient(var(--navbar_color), var(--first_color)); /* Replace --second_color with the desired color or value */
+}
+
 .services_container img{
     width: 100%;
     height: 200px;
-    display: block;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     
@@ -216,35 +237,35 @@ header{
 .start_footer h4{
     font-size: 20px;
     margin-bottom: 5px;
-    color: var(--text_color);
+    color: var(--navbar_text_color);
 }
 
 .start_footer h5{
     font-size: 13px;
     margin-bottom: 5px;
-    color: var(--text_color);
+    color: var(--navbar_text_color);
    
 }
 .footer_info{
-    background: var(--background-color);
+    background: var(--first_color);
 }
 .footer_info p{
     font-size: 15px;
     font-weight: 600;
-    color: var(--text_color);
+    color: var(--navbar_text_color);
 }
 .footer_container {
     display: flex;
     padding: 50px 60px;
     justify-content: space-around;
-    background: var(--background-color);
+
 }
 
 .home_footer {
     display: block;
 }
 .footer h3{
-    color: var(--text_color);
+    color: var(--navbar_text_color);
     margin-bottom: 5px;
 }
 
@@ -252,7 +273,7 @@ header{
     font-size: 15px;
     font-weight: 500;
     padding: 10px 0px;
-    color: var(--text_color);
+    color: var(--navbar_text_color);
 }
 
 .footer a:hover{
@@ -274,4 +295,259 @@ header{
 
 .copyright{
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    
+    
+
+        header{
+            position: absolute;
+            width: 100%;
+            top: 0;
+            right: 0;
+            z-index: 9;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: flex-start;
+            background: var(--navbar_color);
+            padding: 15px 100px;
+            box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5);
+            -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5);
+            -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5);
+            
+        }
+
+        .logo{
+            font-size: 25px;
+            color: #fff;
+        }
+        .navbar{
+            display: flex;
+        }
+        .navbar li{
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 16px;
+            text-decoration: none;
+          
+          }
+        .navbar a::after{
+            content: "";
+            width: 0;
+            height: 3px;
+            background: var(--gradient);
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            transition: 0.5s;
+        }
+
+        
+        .login_btn a{
+            padding: 5px 30px;
+            color: var(--navbar_text_color);
+            font-weight: 400;
+        }
+        
+        .login_btn .login{
+            background-color: var(--first_color);
+            color: var(--navbar_text_color);
+            border-radius: 0.5rem;
+        }
+        
+        .login_btn .login:hover{
+            background-color: var(--navbar_text_color);
+            color: var(--first_color);
+            transition: 0.5s ease;
+        }
+
+
+        .contenthome_container {
+            padding-top: 150px;
+            text-align: center;
+        }
+
+
+        /* More About */
+
+        .more_about {
+            margin-top: 100px;
+        }
+        .more_about_container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .left_moreabout{
+            padding: 0px 20px;
+        }
+        .left_moreabout h3{
+            font-size: 40px;
+            padding-bottom: 40px;
+        }
+        .left_moreabout p{
+            font-size: 15px;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .right_moreabout img{
+            width: auto;
+            height: 300px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+
+
+        /* Services About */
+        .services_about {
+            padding: 0px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .services_about h1{
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 20px;
+        color: #CF1259;
+        }
+        .services_about_container {
+            display: flex;
+     
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .services_container {
+            margin-left: 0px;
+            margin-right: 0px;
+            background: var(--first_color);
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            padding-bottom: 40px;
+            margin-bottom: 20px;
+            transition: all 1s ease; /* Adding a transition for a smooth effect */
+        }
+
+        .services_container:hover {
+            background: linear-gradient(var(--navbar_color), var(--first_color)); /* Replace --second_color with the desired color or value */
+        }
+
+        .services_container img{
+            width: 100%;
+            height: 200px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            
+        }
+
+        .services_container h3{
+            padding-top: 20px;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .services_container p{
+            padding-left: 20px;
+            padding-right: 20px;
+
+            font-size: 15px;
+            text-align: center;
+        }
+
+
+
+        /* Footer */
+        .start_footer{
+            margin-bottom: 50px;
+        }
+        .start_footer h4{
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: var(--navbar_text_color);
+        }
+
+        .start_footer h5{
+            font-size: 13px;
+            margin-bottom: 5px;
+            color: var(--navbar_text_color);
+        
+        }
+        .footer_info{
+            background: var(--first_color);
+        }
+        .footer_info p{
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--navbar_text_color);
+        }
+        .footer_container {
+            display: flex;
+            padding: 50px 60px;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+
+
+
+        .home_footer {
+            display: block;
+            margin-bottom: 50px;
+        }
+        
+        .footer h3{
+            color: var(--navbar_text_color);
+            margin-bottom: 5px;
+        }
+
+        .footer a{
+            font-size: 15px;
+            font-weight: 500;
+            padding: 10px 0px;
+            color: var(--navbar_text_color);
+        }
+
+        .footer a:hover{
+            font-size: 15px;
+            font-weight: 500;
+            padding: 10px 0px;
+            color: var(--navbar_color);
+        }
+
+        .services_footer{
+            margin-bottom: 50px;
+        }
+
+        .contact_footer{
+            margin-bottom: 50px;
+        }
+
+        .icons_block {
+            display: flex;
+            margin-top: 20px;
+            
+        }
+        .icons_block i{
+            font-size: 25px;
+            padding-right: 10px;
+        }
+
+        .copyright{
+            text-align: center;
+        }
+
+
 }
